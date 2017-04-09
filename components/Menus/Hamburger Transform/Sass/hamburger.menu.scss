@@ -7,14 +7,14 @@
 }
 
 html {
-  font-size: 18px;
+  font-size: 28px;
 }
 
 body {
   font-family: "Cutive Mono", serif;
   font-size: 1.2em;
   line-height: 1.6;
-  background: #CCC;
+  background: black;
   overflow-x: hidden;
 }
 
@@ -32,6 +32,7 @@ label {
     box-shadow: 0 0 0 0 #FFF, 0 0 0 0 #FFF;
     cursor: pointer;
   }
+
   .hamburger {
     position: absolute;
     top: 135px;
@@ -42,6 +43,7 @@ label {
     display: block;
     transform-origin: center;
     transition: .5s ease-in-out;
+    //icon
     &:after,
     &:before {
       transition: .5s ease-in-out;
@@ -107,4 +109,5 @@ h1 {
   transform: translate(-50%,-50%);
   width: 80%;
   text-align: center;
+  color: white;
 }
