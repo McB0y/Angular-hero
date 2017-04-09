@@ -12,7 +12,6 @@ $(window).scroll(function() {
 
 // Mobile Navigation
 $('.mobile-toggle').click(function() {
-  //Si la tiene la quita, sino la pone.
     if ($('.main_header').hasClass('open-nav')) {
         $('.main_header').removeClass('open-nav');
     } else {
