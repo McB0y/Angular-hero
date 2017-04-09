@@ -1,0 +1,68 @@
+/* Demo by http://creative-punch.net */
+
+@import "http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css";
+
+body {
+  background: tomato;
+}
+
+.circular-menu {
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.circle {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transform: scale(0);
+  transition: all 0.4s ease-out;
+}
+
+.open.circle {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.circle a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  /*alineaciones del los iconos*/
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  margin-left: -20px;
+  margin-top: -20px;
+  position: absolute;
+  text-align: center;
+
+}
+
+/*Hover de los iconos*/
+.circle a:hover {
+  color: red;
+}
+
+.menu-button {
+  position: absolute;
+  top: calc(50% - 30px);
+  left: calc(50% - 30px);
+  text-decoration: none;
+  color: red;
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  padding: 10px;
+  background: #dde;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu-button:hover {
+  background-color: #eef;
+}
