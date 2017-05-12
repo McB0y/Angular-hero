@@ -12,4 +12,8 @@ export class DataComponent implements OnInit {
   ngOnInit() {
   }
 
+  //Starting with regular expressions and logic by this side.
+
+
+
 }
