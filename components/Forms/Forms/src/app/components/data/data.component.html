@@ -1,3 +1,69 @@
-<p>
-  data works!
-</p>
+<h4>Forms <small>template</small></h4>
+<hr>
+
+
+<!--One way binding for formGroup-->
+<form [formGroup]='formit' (ngSubmit)='getData()' novalidate="novalidate">
+
+  <div>
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label">Name</label>
+      <div class="col-8">
+        <!--FormControlName bind this input text with my property inside the instance of FormGroup.-->
+         <input class="form-control"
+                type="text"
+                placeholder="Name"
+                name="name"
+                formControlName="name"
+         >
+        <div *ngIf="!formit.controls['name'].valid"
+             class="form-control-fedback">
+            "El nombre es necesario!"
+        </div>
+      </div>
+    </div>
+
+    <div class="form-group row">
+      <label class="col-2 col-form-label">Last Name</label>
+      <div class="col-8">
+        <input class="form-control"
+               type="text"
+               placeholder="Last Name"
+               formControlName ="lastName"
+        >
+        <div *ngIf="!formit.controls['lastName'].errors?.required"
+             class="form-control-fedback">
+            "El nombre es necesario!"
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-2 col-form-label">Email</label>
+    <div class="col-md-8">
+
+      <input class="form-control"
+             type="email"
+             placeholder="Email"
+            formControlName ="email"
+      >
+    </div>
+  </div>
+
+  <div class="form-group row">
+    <label class="col-2 col-form-label">&nbsp;</label>
+    <div class="input-group col-md-8">
+      <button type="submit" class="btn btn-outline-primary">
+        Save
+      </button>
+    </div>
+  </div>
+
+</form>
+
+
+
+<!--All the information about form is inside formit object.-->
+<p>{{ formit.valid }}</p>
